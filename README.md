@@ -6,7 +6,7 @@ A PyVista-based 3D trophy visualization tool.
 
 This package provides functionality to create and display a golden trophy with customizable parameters. The trophy consists of two cones connected at their vertices, with the upper cone being larger than the lower one. The trophy includes decorative elements such as disks, a base, spheres, and handles, all rendered in a golden color.
 
-A package for champion (ghahreman) from master (ostad).
+A package for the champion (ghahreman) from the master (ostad).
 
 ## Installation
 
@@ -62,6 +62,16 @@ The `Hero` class accepts the following parameters:
 - `sphere_radius`: Radius of the small sphere tangent to the upper cone's base
 - `handle_thickness`: Thickness of the trophy handles
 
+## Command Line Usage
+
+After installation, you can also run the package from the command line:
+
+```bash
+ghahreman
+```
+
+This will display a trophy with default parameters.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -71,3 +81,16 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Python 3.6 or higher
 - PyVista 0.34.0 or higher
 - NumPy 1.20.0 or higher
+
+## Development
+
+To set up the development environment:
+
+```bash
+# Clone the repository
+git clone https://github.com/Elmino-19/ghahreman.git
+cd ghahreman
+
+# Install development dependencies
+uv pip install -e ".[dev]"
+```

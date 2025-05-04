@@ -2,11 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Unit tests for the Hero class.
+تست‌های واحد برای کلاس Hero.
 
-This module provides unit tests for the Hero class.
-
-A package for champion (ghahreman) from master (ostad).
+این ماژول شامل تست‌های واحد برای کلاس Hero است که در پکیج ghahreman تعریف شده است.
 """
 
 import unittest
@@ -15,12 +13,14 @@ from ghahreman import Hero
 
 class TestHero(unittest.TestCase):
     """
-    Test class for the Hero class.
+    کلاس تست برای کلاس Hero.
+
+    این کلاس شامل تست‌های واحد برای کلاس Hero است.
     """
 
     def test_init_default_parameters(self):
         """
-        Test initialization with default parameters.
+        تست مقادیر پیش‌فرض پارامترهای کلاس Hero.
         """
         hero = Hero()
         self.assertEqual(hero.height1, 1.0)
@@ -31,18 +31,18 @@ class TestHero(unittest.TestCase):
 
     def test_init_custom_parameters(self):
         """
-        Test initialization with custom parameters.
+        تست مقادیر سفارشی پارامترهای کلاس Hero.
         """
-        hero = Hero(height1=2.0, radius1=1.0, resolution=60)
+        hero = Hero(height1=2.0, radius1=1.0, height2=1.0, radius2=0.5, resolution=60)
         self.assertEqual(hero.height1, 2.0)
         self.assertEqual(hero.radius1, 1.0)
-        self.assertEqual(hero.height2, 2.0 / 3.0)
-        self.assertEqual(hero.radius2, 1.0 * 0.8)
+        self.assertEqual(hero.height2, 1.0)
+        self.assertEqual(hero.radius2, 0.5)
         self.assertEqual(hero.resolution, 60)
 
     def test_create_cones(self):
         """
-        Test creation of cones and other elements.
+        تست ایجاد مخروط‌ها و سایر اجزای تروفی.
         """
         hero = Hero()
         self.assertIsNotNone(hero.cone1)
@@ -56,5 +56,5 @@ class TestHero(unittest.TestCase):
         self.assertIsNotNone(hero.handle2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
